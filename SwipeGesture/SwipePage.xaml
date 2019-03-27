@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SwipeGesture.SwipePage">
+    
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="50*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="35*" />
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="35*" />
+                <ColumnDefinition Width="10*" />
+            </Grid.ColumnDefinitions>
+                 <BoxView x:Name="Image" Color="Teal" WidthRequest="300" HeightRequest="300" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
+
+        <BoxView.GestureRecognizers>
+
+            <!-- Can also set a swipe threshold on each gesture recognizer -->
+            <SwipeGestureRecognizer Direction="Left" Swiped="OnSwiped"/>
+            <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+        
+        </BoxView.GestureRecognizers>
+        </BoxView>
+   
+        
+        <Label x:Name="_label" Text="You swiped: " Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" />
+            
+        <Frame x:Name="True" HorizontalOptions="Fill" VerticalOptions="Center" HeightRequest="30" BackgroundColor="Green" CornerRadius="10" Grid.Row="3" Grid.Column="1" Margin="5,5">
+            <Button Text="True" Clicked="OnTrueButtonClicked" x:answer="True" FontSize="18" TextColor="White" />
+        </Frame>
+        <Frame x:Name="False" HorizontalOptions="Fill" VerticalOptions="Center" HeightRequest="30" BackgroundColor="Red" CornerRadius="10" Grid.Row="3" Grid.Column="3" Margin="5,5">
+            <Button Text="False" Clicked="OnFalseButtonClicked" x:answer="False" FontSize="18" TextColor="White" />
+        </Frame>
+            </Grid>
+    
+</ContentPage>
