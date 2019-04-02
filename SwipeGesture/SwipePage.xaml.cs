@@ -1,6 +1,7 @@
 ﻿using Xamarin.Forms;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace SwipeGesture
 {
@@ -11,7 +12,7 @@ namespace SwipeGesture
         List<Card> Cards;
         public SwipePage()
         {
-            CardNumber = 1;
+            CardNumber = 0;
             PageNumber = 1;
 
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace SwipeGesture
             Cards.Add(new Card("Batman", "Batman's real name is Bruce Wayne", true));
             Cards.Add(new Card("CocaCola", "Coca-Cola contains more sugar than Pepsi", false));
             _label.Text = Cards[CardNumber].Question;
+            _image.Source = Cards[CardNumber].Image;
             True.IsVisible = false;
             False.IsVisible = false;
         }
@@ -39,8 +41,12 @@ namespace SwipeGesture
                         {
                             CardNumber++;
                         }
-                    } else {
-                        Navigation.PushAsync
+                        _image.Source = Cards[CardNumber].Image;
+                    }
+                    //else if (CardNumber == Cards.Count && Cards.Count == Cards.Where(c => c.IsAnswered).Count())
+                    else
+                    {
+                        Navigation.PushAsync(new Results(Cards));
                     }
                     break;
                 case SwipeDirection.Right:
@@ -51,6 +57,7 @@ namespace SwipeGesture
                         {
                             CardNumber--;
                         }
+                        _image.Source = Cards[CardNumber].Image;
                     }
                     break;
                 case SwipeDirection.Up:
@@ -63,6 +70,8 @@ namespace SwipeGesture
                 True.IsVisible = true;
                 False.IsVisible = true;
                 _label.IsVisible = false;
+                
+               
             } else {
                 _label.Text = Cards[CardNumber].Question;
                 True.IsVisible = false;
@@ -77,16 +86,18 @@ namespace SwipeGesture
             if (Cards[CardNumber].IsTrue){
                 Cards[CardNumber].IsCorrect = true;
             }
+            True.BorderColor = Color.DarkGreen;
 
         }
         void OnFalseButtonClicked(object sender, EventArgs e)
         {
 
             Cards[CardNumber].IsAnswered = true;
-            if (Cards[CardNumber].IsTrue)
+            if (!Cards[CardNumber].IsTrue)
             {
-                Cards[CardNumber].IsCorrect = false;
+                Cards[CardNumber].IsCorrect = true;
             }
+            False.BorderColor = Color.DarkGreen;
         }
     }
 }

@@ -1,0 +1,13 @@
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\bin\Release\netstandard2.0\SwipeGesture.deps.json
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\bin\Release\netstandard2.0\SwipeGesture.dll
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\bin\Release\netstandard2.0\SwipeGesture.pdb
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\obj\Release\netstandard2.0\Results.xaml.g.cs
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\obj\Release\netstandard2.0\SwipePage.xaml.g.cs
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\obj\Release\netstandard2.0\SwipeGesture.csproj.CoreCompileInputs.cache
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\obj\Release\netstandard2.0\SwipeGesture.AssemblyInfoInputs.cache
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\obj\Release\netstandard2.0\SwipeGesture.AssemblyInfo.cs
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\obj\Release\netstandard2.0\SwipeGesture.dll
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture\obj\Release\netstandard2.0\SwipeGesture.pdb

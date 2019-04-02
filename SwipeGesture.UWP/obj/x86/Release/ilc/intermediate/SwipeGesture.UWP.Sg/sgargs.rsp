@@ -1,0 +1,12 @@
+﻿/ref:"C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.UWP\obj\x86\Release\ilc\intermediate\PreMergeILTransformed"
+/ref:"C:\Users\Sean\.nuget\packages\runtime.win10-x86.microsoft.net.native.sharedlibrary\2.1.8\tools\SharedLibrary\ret\AnalysisILToc"
+/ref:"C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.UWP\obj\x86\Release\ilc\intermediate\PreMergeILTransformed"
+/ref:"C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.UWP\obj\x86\Release\ilc\in\\"
+/ref:"C:\Users\Sean\.nuget\packages\runtime.win10-x86.microsoft.net.native.compiler\2.1.8\tools\x86\ilc\lib\Private\\"
+/ref:"C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.UWP\obj\x86\Release\ilc\in"
+/ref:"C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.UWP\obj\x86\Release\ilc\in\WinMetadata"
+/ca:System.Private.CoreLib
+/cscpath:"C:\Users\Sean\.nuget\packages\microsoft.net.native.compiler\2.1.8\tools\csc"
+/out:"C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.UWP\obj\x86\Release\ilc\intermediate\SgGenerated\\"
+/int:"C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.UWP\obj\x86\Release\ilc\intermediate\SwipeGesture.UWP.Sg"
+"@C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.UWP\obj\x86\Release\ilc\intermediate\SwipeGesture.UWP.Sg\ComputedSerializationInput.txt"

@@ -1,0 +1,1 @@
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.UWP\SwipeGesture.UWP.csproj;x86

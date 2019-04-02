@@ -1,0 +1,2 @@
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.Android\obj\Debug\44\MonoAndroid,Version=v4.4.AssemblyAttributes.cs
+C:\Users\Sean\Source\Repos\SwipeGesture\SwipeGesture.Android\obj\Debug\44\SwipeGesture.Android.nuget.stamp
