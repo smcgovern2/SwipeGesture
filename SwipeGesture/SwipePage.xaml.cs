@@ -11,7 +11,7 @@ namespace SwipeGesture
         List<Card> Cards;
         public SwipePage()
         {
-            CardNumber = 1;
+            CardNumber = 0;
             PageNumber = 1;
 
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace SwipeGesture
         }
 
 
-        void OnSwiped(object sender, SwipedEventArgs e)
+        async void OnSwiped(object sender, SwipedEventArgs e)
         {
             switch (e.Direction)
             {
@@ -40,7 +40,7 @@ namespace SwipeGesture
                             CardNumber++;
                         }
                     } else {
-                        Navigation.PushAsync
+                        await Navigation.PushAsync(new Results(Cards));
                     }
                     break;
                 case SwipeDirection.Right:
@@ -71,20 +71,26 @@ namespace SwipeGesture
 
             }
         }
-        void OnTrueButtonClicked(object sender, EventArgs e)
+        async void OnTrueButtonClicked(object sender, EventArgs e)
         {
             Cards[CardNumber].IsAnswered = true;
             if (Cards[CardNumber].IsTrue){
                 Cards[CardNumber].IsCorrect = true;
+            } else {
+                await DisplayAlert("Oops!", "That fact was false", "OK");
+                Cards[CardNumber].IsCorrect = false;
             }
 
         }
-        void OnFalseButtonClicked(object sender, EventArgs e)
+        async void OnFalseButtonClicked(object sender, EventArgs e)
         {
 
             Cards[CardNumber].IsAnswered = true;
-            if (Cards[CardNumber].IsTrue)
+            if (!Cards[CardNumber].IsTrue)
             {
+                Cards[CardNumber].IsCorrect = true;
+            } else {
+                await DisplayAlert("Oops!", "That fact was true", "OK");
                 Cards[CardNumber].IsCorrect = false;
             }
         }
