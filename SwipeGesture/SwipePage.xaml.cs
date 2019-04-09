@@ -41,8 +41,9 @@ namespace SwipeGesture
                         {
                             CardNumber++;
                         }
+
                         _image.Source = Cards[CardNumber].Image;
-                        Navigation.PushAsync(new Results(Cards));
+                    
                     } else {
                         await Navigation.PushAsync(new Results(Cards));
                     }
@@ -68,6 +69,8 @@ namespace SwipeGesture
                 True.IsVisible = true;
                 False.IsVisible = true;
                 _label.IsVisible = false;
+                
+               
             } else {
                 _label.Text = Cards[CardNumber].Question;
                 True.IsVisible = false;
@@ -98,6 +101,7 @@ namespace SwipeGesture
             } else {
                 await DisplayAlert("Oops!", "That fact was true", "OK");
                 Cards[CardNumber].IsCorrect = false;
+
             }
             False.BorderColor = Color.DarkGreen;
         }

@@ -9,7 +9,7 @@ namespace SwipeGesture
     {
         public Results(List<Card> cards)
         {
-            Cards = cards;
+            
 
             InitializeComponent();
 
