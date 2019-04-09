@@ -7,15 +7,14 @@ namespace SwipeGesture
 {
     public partial class Results : ContentPage
     {
-        List<Card> Cards;
         public Results(List<Card> cards)
         {
             Cards = cards;
 
             InitializeComponent();
 
+            score.Text = "You got " + cards.Count(c => c.IsCorrect) + "/" + cards.Count + " Questions right";
 
-            _Score.Text = "You got " + Cards.Where(c => c.IsCorrect).Count() + "/" + Cards.Count + " Correct!" ;
         }
     }
 }

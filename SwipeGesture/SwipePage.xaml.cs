@@ -29,7 +29,7 @@ namespace SwipeGesture
         }
 
 
-        void OnSwiped(object sender, SwipedEventArgs e)
+        async void OnSwiped(object sender, SwipedEventArgs e)
         {
             switch (e.Direction)
             {
@@ -42,11 +42,9 @@ namespace SwipeGesture
                             CardNumber++;
                         }
                         _image.Source = Cards[CardNumber].Image;
-                    }
-                    //else if (CardNumber == Cards.Count && Cards.Count == Cards.Where(c => c.IsAnswered).Count())
-                    else
-                    {
                         Navigation.PushAsync(new Results(Cards));
+                    } else {
+                        await Navigation.PushAsync(new Results(Cards));
                     }
                     break;
                 case SwipeDirection.Right:
@@ -70,8 +68,6 @@ namespace SwipeGesture
                 True.IsVisible = true;
                 False.IsVisible = true;
                 _label.IsVisible = false;
-                
-               
             } else {
                 _label.Text = Cards[CardNumber].Question;
                 True.IsVisible = false;
@@ -80,22 +76,28 @@ namespace SwipeGesture
 
             }
         }
-        void OnTrueButtonClicked(object sender, EventArgs e)
+        async void OnTrueButtonClicked(object sender, EventArgs e)
         {
             Cards[CardNumber].IsAnswered = true;
             if (Cards[CardNumber].IsTrue){
                 Cards[CardNumber].IsCorrect = true;
+            } else {
+                await DisplayAlert("Oops!", "That fact was false", "OK");
+                Cards[CardNumber].IsCorrect = false;
             }
             True.BorderColor = Color.DarkGreen;
 
         }
-        void OnFalseButtonClicked(object sender, EventArgs e)
+        async void OnFalseButtonClicked(object sender, EventArgs e)
         {
 
             Cards[CardNumber].IsAnswered = true;
             if (!Cards[CardNumber].IsTrue)
             {
                 Cards[CardNumber].IsCorrect = true;
+            } else {
+                await DisplayAlert("Oops!", "That fact was true", "OK");
+                Cards[CardNumber].IsCorrect = false;
             }
             False.BorderColor = Color.DarkGreen;
         }
